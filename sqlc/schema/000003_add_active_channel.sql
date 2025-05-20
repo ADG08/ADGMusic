@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS active_channels (
+    id SERIAL PRIMARY KEY,
+    guild_id TEXT NOT NULL REFERENCES guilds(id),
+    channel_id TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
